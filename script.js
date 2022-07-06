@@ -6,6 +6,8 @@ let thursdayButton = document.getElementsByClassName('btn-success')[4];
 let fridayButton = document.getElementsByClassName('btn-success')[5];
 let saturdayButton = document.getElementsByClassName('btn-success')[6];
 
+//SAVE FUNCTION BELOW
+
 sundayButton.addEventListener('click',  function(){
     localStorage.setItem('sundayText', document.getElementById("sundayText").value);
 });
@@ -33,3 +35,17 @@ fridayButton.addEventListener('click',  function(){
 saturdayButton.addEventListener('click',  function(){
     localStorage.setItem('saturdayText', document.getElementById("saturdayText").value);
 });
+
+
+// RETRIEVAL FROM LOCAL STORAGE
+
+document.getElementById("sundayText").innerHTML = localStorage.getItem('sundayText');
+document.getElementById("mondayText").innerHTML = localStorage.getItem('mondayText');
+document.getElementById("tuesdayText").innerHTML = localStorage.getItem('tuesdayText');
+document.getElementById("wednesdayText").innerHTML = localStorage.getItem('wednesdayText');
+document.getElementById("thursdayText").innerHTML = localStorage.getItem('thursdayText');
+document.getElementById("fridayText").innerHTML = localStorage.getItem('fridayText');
+document.getElementById("saturdayText").innerHTML = localStorage.getItem('saturdayText');
+
+
+//CLEAR PLANNER FUNCTIONALITY
