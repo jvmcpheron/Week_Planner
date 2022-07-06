@@ -26,18 +26,19 @@
   <body>
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
+
       <p id="currentDay" class="lead"></p>
+      <div class="row justify-content-center">
+        <div class="col d-flex lead" id="calender"><p>Day</p></div>
+    </div>
     </header>
     <div class="container">
       <!-- Timeblocks go here -->
-      <div class="row justify-content-center">
-          <div class="col-8 d-flex justify-content-center" id="calender"><p>Clock</p></div>
-      </div>
+
       <div class="row mb-4">
-          <div class="col-sm-2 text-center d-flex align-items-center justify-content-left"><p>Sunday</p></div>
-          <div class="col-sm-9"><textarea class="form-control" id="sundayText" rows="3"></textarea></div>
-          <button type="button" class="col-sm-1 btn btn-success text-center">Save</button>
+          <div class="col-sm-2  text-center d-flex align-items-center justify-content-left"><p>Sunday</p></div>
+          <div class="col-sm-9  col-md-9"><textarea class="form-control" id="sundayText" rows='3'></textarea></div>
+          <button type="button" class="col-sm-1  btn btn-success text-center">Save</button>
       </div>
       <div class="row mb-4">
         <div class="col-sm-2 text-center d-flex align-items-center justify-content-left"><p>Monday</p></div>
