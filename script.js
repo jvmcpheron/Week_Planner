@@ -1,3 +1,4 @@
+
 let sundayButton = document.getElementsByClassName('btn-success')[0];
 let mondayButton = document.getElementsByClassName('btn-success')[1];
 let tuesdayButton = document.getElementsByClassName('btn-success')[2];
@@ -68,3 +69,8 @@ document.getElementById("thursdayText").innerHTML = localStorage.getItem('thursd
 document.getElementById("fridayText").innerHTML = localStorage.getItem('fridayText');
 document.getElementById("saturdayText").innerHTML = localStorage.getItem('saturdayText');
 });
+
+
+// Time At The Top
+
+document.getElementById("calender").innerHTML = "Today Is: " + moment().format('dddd');
