@@ -54,20 +54,22 @@ document.getElementById("saturdayText").innerHTML = localStorage.getItem('saturd
 let clearBtn = document.getElementsByClassName('btn-danger')[0];
 
 clearBtn.addEventListener("click" ,  () => {
-    localStorage.setItem('sundayText' , "");
-    localStorage.setItem('mondayText', "");
-    localStorage.setItem('tuesdayText' , "");
-    localStorage.setItem('wednesdayText', "");
-    localStorage.setItem('thursdayText', "");
-    localStorage.setItem('fridayText' , '');
-    localStorage.setItem('saturdayText' , "");
-    document.getElementById("sundayText").innerHTML = localStorage.getItem('sundayText');
-document.getElementById("mondayText").innerHTML = localStorage.getItem('mondayText');
-document.getElementById("tuesdayText").innerHTML = localStorage.getItem('tuesdayText');
-document.getElementById("wednesdayText").innerHTML = localStorage.getItem('wednesdayText');
-document.getElementById("thursdayText").innerHTML = localStorage.getItem('thursdayText');
-document.getElementById("fridayText").innerHTML = localStorage.getItem('fridayText');
-document.getElementById("saturdayText").innerHTML = localStorage.getItem('saturdayText');
+
+    let clear = window.confirm("Are you sure you want to clear your planner?\nYou will not be able to recover this information once you do.");
+    console.log(clear);
+    if (clear == true){
+        localStorage.setItem('sundayText' , "");
+        localStorage.setItem('mondayText', "");
+        localStorage.setItem('tuesdayText' , "");
+        localStorage.setItem('wednesdayText', "");
+        localStorage.setItem('thursdayText', "");
+        localStorage.setItem('fridayText' , '');
+        localStorage.setItem('saturdayText' , "");
+        location.reload();
+    } else {
+        alert("Okay, the information will not be cleared.")
+    }
+
 });
 
 
